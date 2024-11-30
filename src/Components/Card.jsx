@@ -1,6 +1,4 @@
-import React from "react";
-
-
+/* eslint-disable react/prop-types */
 const Card = ({ name, username, id }) => {
 
   const addFav = ()=>{
