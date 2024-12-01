@@ -11,6 +11,7 @@ const Contact = () => {
   const handleFormSubmit = (data) => {
     setFormData(data); 
     setIsSubmitted(true); 
+    console.log("Datos del formulario:", data);
   };
 
   return (

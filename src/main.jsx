@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom/client';
-
 import App from './App';
 import './styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,9 +12,6 @@ root.render(
   
 );
 
-(<ContextProvider>
-    <App />
-  </ContextProvider>
-);
+
 
 
