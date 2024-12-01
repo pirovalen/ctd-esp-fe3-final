@@ -10,6 +10,12 @@ root.render(
   <BrowserRouter>
       <App/>
   </BrowserRouter>
+  
+);
+
+(<ContextProvider>
+    <App />
+  </ContextProvider>
 );
 
 
