@@ -1,12 +1,14 @@
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { GlobalStates } from "../Components/utils/global.context";
 
 const Detail = () => {
   const { id } = useParams(); 
   const [dentist, setDentist] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { state } = useContext(GlobalStates);
 
   useEffect(() => {
     const fetchDentist = async () => {
@@ -31,7 +33,7 @@ const Detail = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <>
+    <main className={state.theme === "dark" ? "dark" : "light"}> 
       <h1>Detalle del Dentista</h1>
       {dentist ? (
         <div>
@@ -43,7 +45,7 @@ const Detail = () => {
       ) : (
         <p>No se encontró información para el dentista con ID: {id}</p>
       )}
-    </>
+    </main>
   );
 };
 

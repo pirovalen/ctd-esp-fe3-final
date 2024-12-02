@@ -18,9 +18,9 @@ const globalReducer = (state, action) => {
   }
 };
 
-export const ContextGlobal = createContext(undefined);
+export const GlobalStates = createContext(undefined);
 
-export const ContextProvider = ({ children }) => {
+export const Context = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, initialState);
 
   useEffect(() => {
@@ -39,8 +39,8 @@ export const ContextProvider = ({ children }) => {
   const contextValue = useMemo(() => ({ state, dispatch }), [state, dispatch]);
 
   return (
-    <ContextGlobal.Provider value={contextValue}>
+    <GlobalStates.Provider value={contextValue}>
       {children}
-    </ContextGlobal.Provider>
+    </GlobalStates.Provider>
   );
 };
