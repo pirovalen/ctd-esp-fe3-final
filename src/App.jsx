@@ -5,11 +5,11 @@ import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs"; 
-import { ContextProvider } from "./Components/utils/global.context"; 
+import { Context } from "./Components/utils/global.context"; 
 
 function App() {
   return (
-    <ContextProvider> 
+    <Context> 
       <div className="App">
         <Navbar />
 
@@ -22,7 +22,7 @@ function App() {
 
         <Footer />
       </div>
-    </ContextProvider>
+    </Context>
   );
 }
 

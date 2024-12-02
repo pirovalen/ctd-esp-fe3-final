@@ -1,12 +1,15 @@
-import { useState } from 'react'; 
+import { useState, useContext } from 'react'; 
 import Form from '../Components/Form';
 import Message from '../Components/Message'; 
+import { GlobalStates } from "../Components/utils/global.context"; 
 
 // Este componente deberá ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); 
   const [formData, setFormData] = useState({ nombre: "", email: "" }); 
+
+  const { state } = useContext(GlobalStates); 
 
   const handleFormSubmit = (data) => {
     setFormData(data); 
@@ -15,6 +18,7 @@ const Contact = () => {
   };
 
   return (
+    <main className={state.theme === "dark" ? "dark" : "light"}> 
     <div>
       {!isSubmitted ? ( 
         <>
@@ -26,6 +30,7 @@ const Contact = () => {
         <Message nombre={formData.nombre} /> 
       )}
     </div>
+    </main>
   );
 };
 
