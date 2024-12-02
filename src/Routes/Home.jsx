@@ -2,6 +2,8 @@ import { useContext } from "react";
 import Card from "../Components/Card";
 import { GlobalStates } from "../Components/utils/global.context"; 
 
+
+
 const Home = () => {
   const { state } = useContext(GlobalStates); 
 

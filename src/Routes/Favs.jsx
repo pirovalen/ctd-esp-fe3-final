@@ -9,7 +9,6 @@ const Favs = () => {
   const { state } = useContext(GlobalStates);
 
   useEffect(() => {
-    // Recuperar los dentistas destacados desde localStorage usando la clave "favs"
     const storedDentists = localStorage.getItem("favs");
     if (storedDentists) {
       setDentists(JSON.parse(storedDentists));

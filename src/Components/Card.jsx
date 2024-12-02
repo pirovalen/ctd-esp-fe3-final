@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
+
 const Card = ({ name, username, id }) => {
   const addFav = () => {
     const favs = JSON.parse(localStorage.getItem("favs")) || []; 
@@ -16,6 +17,7 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className="card">
+      <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76U1rKRwl1aQdVAFdJT0dDmNETyZCqiARbRZqMWpgjuby78XGe2KNPGCcz4yVkzSd2xg&usqp=CAU"} className="cardImage" />
       <h2>{name}</h2>
       <p>Username: {username}</p>
       <p>ID: {id}</p>

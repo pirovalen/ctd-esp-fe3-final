@@ -13,7 +13,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchDentist = async () => {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${2}`);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
         if (!response.ok) {
           throw new Error("Error al obtener los datos del dentista.");
         }
