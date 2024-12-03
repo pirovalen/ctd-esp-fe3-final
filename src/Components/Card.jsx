@@ -17,7 +17,7 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className="card">
-      <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76U1rKRwl1aQdVAFdJT0dDmNETyZCqiARbRZqMWpgjuby78XGe2KNPGCcz4yVkzSd2xg&usqp=CAU"} className="cardImage" />
+      <img src="/public/images/doctor.jpg" className="cardImage" />
       <h2>{name}</h2>
       <p>Username: {username}</p>
       <p>ID: {id}</p>
