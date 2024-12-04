@@ -19,15 +19,15 @@ const Card = ({ name, username, id }) => {
     <div className="card">
       <img src="/public/images/doctor.jpg" className="cardImage" />
       <h2>{name}</h2>
-      <p>Username: {username}</p>
-      <p>ID: {id}</p>
+      <p>{username}</p>
+      
 
-      <Link to={`/dentist/${id}`} className="detailsLink">
+      {/* <Link to={`/dentist/${id}`} className="detailsLink">
         View Details
-      </Link>
+      </Link> */}
 
       <button onClick={addFav} className="favButton">
-        Add to Favorites
+      <img src="/images/star-solid.svg" alt="Add to favorites" width="24" height="24" /> {/* Aquí usamos el SVG de la estrella */}
       </button>
     </div>
   );

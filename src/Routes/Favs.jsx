@@ -16,14 +16,13 @@ const Favs = () => {
     }
   }, []);
   const handleClearFavorites = () => {
-    localStorage.removeItem("favs"); // Borra los favoritos del localStorage
-    setDentists([]); // Limpia el estado local
+    localStorage.removeItem("favs"); 
+    setDentists([]); 
   };
 
   return (
     <main className={state.theme === "dark" ? "dark" : "light"}> 
       <h1>Dentists Favs</h1>
-      <button onClick={handleClearFavorites}>Limpiar Favoritos</button>
       <div className="card-grid">
         {dentists.length > 0 ? (
           dentists.map((dentist, index) => (
@@ -38,6 +37,11 @@ const Favs = () => {
           <p>No hay dentistas destacados.</p>
         )}
       </div>
+      {dentists.length > 0 && (
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+          <button onClick={handleClearFavorites}>Limpiar Favoritos</button>
+        </div>
+      )}
     </main>
     
   );
