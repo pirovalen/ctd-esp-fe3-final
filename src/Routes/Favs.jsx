@@ -10,14 +10,20 @@ const Favs = () => {
 
   useEffect(() => {
     const storedDentists = localStorage.getItem("favs");
+    console.log("Contenido de favs en localStorage:", storedDentists);
     if (storedDentists) {
       setDentists(JSON.parse(storedDentists));
     }
   }, []);
+  const handleClearFavorites = () => {
+    localStorage.removeItem("favs"); // Borra los favoritos del localStorage
+    setDentists([]); // Limpia el estado local
+  };
 
   return (
     <main className={state.theme === "dark" ? "dark" : "light"}> 
       <h1>Dentists Favs</h1>
+      <button onClick={handleClearFavorites}>Limpiar Favoritos</button>
       <div className="card-grid">
         {dentists.length > 0 ? (
           dentists.map((dentist, index) => (
