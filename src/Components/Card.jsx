@@ -27,7 +27,7 @@ const Card = ({ name, username, id }) => {
       </Link> */}
 
       <button onClick={addFav} className="favButton">
-      <img src="/images/star-solid.svg" alt="Add to favorites" width="24" height="24" /> {/* Aquí usamos el SVG de la estrella */}
+      <img src="/images/star-solid.svg" alt="Add to favorites" width="24" height="24" /> 
       </button>
     </div>
   );
