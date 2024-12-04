@@ -12,12 +12,19 @@ const Navbar = () => {
 
   return (
     <nav className={state.theme}> 
-      <Link to="/"><h4>Inicio</h4></Link>
-      <Link to="/contact"><h4>Contacto</h4></Link>
-      <Link to="/dentist/:id"><h4>Detalle Dentista</h4></Link>
-      <Link to="/favs"><h4>Destacados</h4></Link>
+      <h4 style={{ position: "absolute", left: "80px"}}>
+        <span style={{ color: "red" }}>D</span>H Odonto
+      </h4>
 
-      <button onClick={handleThemeChange}>Change theme</button>
+      <Link to="/"><h4>Home</h4></Link>
+      <Link to="/contact"><h4>Contacts</h4></Link>
+      <Link to="/favs"><h4>Favs</h4></Link>
+
+      <button onClick={handleThemeChange} className="theme-button">
+        <img className="theme-icon"
+        src={state.theme === "dark" ? "/images/sun-solid.svg" : "/images/moon-solid.svg"}
+        alt="Change theme"/>
+      </button>
     </nav>
   );
 };

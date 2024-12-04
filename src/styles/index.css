@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -25,8 +26,12 @@ h1{
 
 nav{
   display: flex;
-  justify-content: space-around;
-  padding: 1rem;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  
+  margin-right: 2rem;
+  gap:15px;
 }
 
 a{
@@ -38,6 +43,20 @@ a{
 a:hover{
   color: rgb(136, 136, 136);
 } 
+.theme-icon {
+  width: 24px; 
+  height: 24px;
+  cursor: pointer;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 footer {
   display: flex;
@@ -54,9 +73,25 @@ footer > img{
   width: 200px;
   margin: 0;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-left: auto; 
+  justify-content: flex-start;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 form{
@@ -73,10 +108,12 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  text-align: center; 
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
+
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
