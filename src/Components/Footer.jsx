@@ -3,8 +3,10 @@ import { GlobalStates } from "./utils/global.context";
 
 const Footer = () => {
   const { state } = useContext(GlobalStates); 
+  const isLightTheme = state.theme === "light";
+
   return (
-    <footer className={state.theme}>
+    <footer className={isLightTheme ? "footer light-theme" : "footer dark-theme"}>
     
         <p>Powered by</p>
         <img src="./images/DH.png" alt='DH-logo' /> 

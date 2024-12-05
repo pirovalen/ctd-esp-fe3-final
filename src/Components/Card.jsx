@@ -22,9 +22,9 @@ const Card = ({ name, username, id }) => {
       <p>{username}</p>
       
 
-      {/* <Link to={`/dentist/${id}`} className="detailsLink">
+      <Link to={`/dentist/${id}`} className="detailsLink">
         View Details
-      </Link> */}
+      </Link>
 
       <button onClick={addFav} className="favButton">
       <img src="/images/star-solid.svg" alt="Add to favorites" width="24" height="24" /> 
