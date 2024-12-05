@@ -17,7 +17,7 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className="card">
-      <img src="./public/images/doctor.jpg" className="cardImage" />
+      <img src="public/images/doctor.jpg" className="cardImage" />
       <h2>{name}</h2>
       <p>{username}</p>
       
