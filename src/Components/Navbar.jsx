@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className={state.theme}> 
-      <h4 style={{ position: "absolute", left: "80px"}}>
+      <h4 style={{ position: "absolute", left: "4vw"}}>
         <span style={{ color: "red" }}>D</span>H Odonto
       </h4>
 
